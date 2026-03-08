@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "llm-jax"
+version = "0.1.0"
+description = "A small GPT-style LLM built from scratch with JAX/Flax"
+requires-python = ">=3.10"
+dependencies = [
+    "jax",
+    "jax-metal",
+    "flax>=0.10.0",
+    "optax",
+    "orbax-checkpoint",
+    "tiktoken",
+    "datasets",
+    "fastapi",
+    "uvicorn[standard]",
+    "pyyaml",
+]

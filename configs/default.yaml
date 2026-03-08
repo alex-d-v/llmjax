@@ -1,0 +1,40 @@
+# Model
+vocab_size: 50257
+d_model: 512
+n_heads: 8
+n_layers: 6
+d_ff: 2048
+max_seq_len: 512
+dropout_rate: 0.1
+
+# Training
+batch_size: 32
+learning_rate: 3.0e-4
+warmup_steps: 500
+max_steps: 50000
+weight_decay: 0.1
+grad_clip: 1.0
+seed: 42
+
+# Data
+dataset: "roneneldan/TinyStories"        # or any HuggingFace dataset
+tokenizer: "tiktoken"         # "tiktoken" | "sentencepiece"
+tokenizer_name: "gpt2"
+
+# Checkpointing
+checkpoint_dir: "./checkpoints"
+save_every: 5000
+eval_every: 1000
+
+# Serving
+serve_port: 8000
+max_new_tokens: 256
+temperature: 0.8
+top_k: 50
+
+# ── Logging ──
+logging:
+  wandb: false                  # set true to enable
+  wandb_project: "llm-jax"
+  tensorboard: false            # set true to enable
+  tb_log_dir: "./runs"

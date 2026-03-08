@@ -1,0 +1,10 @@
+jax
+jax-metal; sys_platform == "darwin"
+flax>=0.10.0
+optax
+orbax-checkpoint
+tiktoken
+datasets
+fastapi
+uvicorn
+pyyaml
